@@ -1,6 +1,6 @@
 {
   "name": "lkd-backend",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "main": "src/main.js",
   "description": "itcast.cn li ke de backend",
@@ -64,16 +64,13 @@
       "package.json",
       "src/main.js"
     ],
-    "directories": {
-      "buildResources": "assets"
-    },
     "mac": {
       "category": "public.app-category.productivity",
       "artifactName": "${productName}-${version}-${arch}.${ext}"
     },
     "dmg": {
-      "background": "#ffffff",
-      "icon": "assets/logo192.png",
+      "background": "public/logo512.png",
+      "icon": "public/logo192.png",
       "iconSize": 100,
       "contents": [
         {
@@ -98,7 +95,7 @@
         "msi",
         "nsis"
       ],
-      "icon": "assets/logo192.png",
+      "icon": "public/logo192.png",
       "artifactName": "${productName}-Web-Setup-${version}.${ext}",
       "publisherName": "andremao"
     },
