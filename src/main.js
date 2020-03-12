@@ -1,4 +1,7 @@
 const { app, BrowserWindow } = require('electron')
+const isDev = require('electron-is-dev')
+
+const { join } = require('path')
 
 ;(async () => {
   await app.whenReady()
@@ -15,7 +18,5 @@ const { app, BrowserWindow } = require('electron')
     mainWindow = null
   })
 
-  const isDev = require('electron-is-dev')
-
-  mainWindow.loadURL(isDev ? 'http://localhost:3000' : 'fakeurl')
+  mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${join(__dirname, '../build/index.html')}`)
 })()
