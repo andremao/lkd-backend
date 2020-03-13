@@ -64,13 +64,16 @@
       "package.json",
       "src/main.js"
     ],
+    "directories": {
+      "buildResources": "assets"
+    },
     "mac": {
       "category": "public.app-category.productivity",
-      "artifactName": "${productName}-${version}-${arch}.${ext}"
+      "artifactName": "${productName}-v${version}-${arch}.${ext}"
     },
     "dmg": {
-      "background": "public/logo512.png",
-      "icon": "public/logo192.png",
+      "background": "assets/dmgbg.png",
+      "icon": "assets/icon.icns",
       "iconSize": 100,
       "contents": [
         {
@@ -95,8 +98,8 @@
         "msi",
         "nsis"
       ],
-      "icon": "public/logo192.png",
-      "artifactName": "${productName}-Web-Setup-${version}.${ext}",
+      "icon": "assets/icon.icns",
+      "artifactName": "${productName}-Web-Setup-v${version}.${ext}",
       "publisherName": "andremao"
     },
     "nsis": {
